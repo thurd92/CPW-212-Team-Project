@@ -1,0 +1,9 @@
+C:\Users\rgarcia\Desktop\CatalogDB\CatalogDB\bin\Debug\CatalogDB.dacpac
+C:\Users\rgarcia\Desktop\CatalogDB\CatalogDB\bin\Debug\CatalogDB.dll
+C:\Users\rgarcia\Desktop\CatalogDB\CatalogDB\bin\Debug\CatalogDB.pdb
+C:\Users\rgarcia\Desktop\CatalogDB\CatalogDB\obj\Debug\Model.xml
+C:\Users\rgarcia\Desktop\CatalogDB\CatalogDB\obj\Debug\refactor.xml
+C:\Users\rgarcia\Desktop\CatalogDB\CatalogDB\obj\Debug\postdeploy.sql
+C:\Users\rgarcia\Desktop\CatalogDB\CatalogDB\obj\Debug\predeploy.sql
+C:\Users\rgarcia\Desktop\CatalogDB\CatalogDB\obj\Debug\CatalogDB.dll
+C:\Users\rgarcia\Desktop\CatalogDB\CatalogDB\obj\Debug\CatalogDB.pdb
