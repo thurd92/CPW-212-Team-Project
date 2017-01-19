@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace MediaApplication
 {
-    class MediaDB
+    static class MediaDB
     {
+        /// <summary>
+        /// gets all the movies from the database
+        /// </summary>
+        
+
+
     }
 }
