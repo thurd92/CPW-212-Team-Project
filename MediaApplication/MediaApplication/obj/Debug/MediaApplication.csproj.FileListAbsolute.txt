@@ -1,2 +1,17 @@
 F:\CPW212\CPW212FinalProject\MediaApplication\MediaApplication\bin\Debug\MediaApplication.exe.config
 C:\Users\rgarcia\Source\Repos\CPW-212-Team-Project\MediaApplication\MediaApplication\bin\Debug\MediaApplication.exe.config
+C:\Users\rgarcia\Source\Repos\T\CPW-212-Team-Project\MediaApplication\MediaApplication\bin\Debug\MediaApplication.exe.config
+C:\Users\rgarcia\Source\Repos\T\CPW-212-Team-Project\MediaApplication\MediaApplication\bin\Debug\MediaApplication.exe
+C:\Users\rgarcia\Source\Repos\T\CPW-212-Team-Project\MediaApplication\MediaApplication\bin\Debug\MediaApplication.pdb
+C:\Users\rgarcia\Source\Repos\T\CPW-212-Team-Project\MediaApplication\MediaApplication\bin\Debug\EntityFramework.dll
+C:\Users\rgarcia\Source\Repos\T\CPW-212-Team-Project\MediaApplication\MediaApplication\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\rgarcia\Source\Repos\T\CPW-212-Team-Project\MediaApplication\MediaApplication\bin\Debug\EntityFramework.xml
+C:\Users\rgarcia\Source\Repos\T\CPW-212-Team-Project\MediaApplication\MediaApplication\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\rgarcia\Source\Repos\T\CPW-212-Team-Project\MediaApplication\MediaApplication\obj\Debug\MediaApplication.csprojResolveAssemblyReference.cache
+C:\Users\rgarcia\Source\Repos\T\CPW-212-Team-Project\MediaApplication\MediaApplication\obj\Debug\MediaApplication.AddMedia.resources
+C:\Users\rgarcia\Source\Repos\T\CPW-212-Team-Project\MediaApplication\MediaApplication\obj\Debug\MediaApplication.MediaApp.resources
+C:\Users\rgarcia\Source\Repos\T\CPW-212-Team-Project\MediaApplication\MediaApplication\obj\Debug\MediaApplication.Properties.Resources.resources
+C:\Users\rgarcia\Source\Repos\T\CPW-212-Team-Project\MediaApplication\MediaApplication\obj\Debug\MediaApplication.csproj.GenerateResource.Cache
+C:\Users\rgarcia\Source\Repos\T\CPW-212-Team-Project\MediaApplication\MediaApplication\obj\Debug\MediaApplication.exe
+C:\Users\rgarcia\Source\Repos\T\CPW-212-Team-Project\MediaApplication\MediaApplication\obj\Debug\MediaApplication.pdb
+C:\Users\rgarcia\Source\Repos\T\CPW-212-Team-Project\MediaApplication\MediaApplication\obj\Debug\MediaApplication.AddCast.resources

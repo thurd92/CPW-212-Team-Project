@@ -10,23 +10,17 @@ using System.Windows.Forms;
 
 namespace MediaApplication
 {
-    public partial class MediaApp : Form
+    public partial class AddMedia : Form
     {
-        public MediaApp()
+        public AddMedia()
         {
             InitializeComponent();
         }
 
-
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            AddMedia addFrm = new AddMedia();
-            addFrm.Show();
-        }
-
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            this.Close();
+            AddCast addCast = new AddCast();
+            addCast.Show();
         }
     }
 }
