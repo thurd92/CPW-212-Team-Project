@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MediaDBModelStoreContainer" CdmEntityContainer="MediaDBEntities">
+    <EntitySetMapping Name="Awards">
+      <EntityTypeMapping TypeName="MediaDBModel.Awards">
+        <MappingFragment StoreEntitySet="Awards">
+          <ScalarProperty Name="AwardsID" ColumnName="AwardsID" />
+          <ScalarProperty Name="AwardsName" ColumnName="AwardsName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CastList">
+      <EntityTypeMapping TypeName="MediaDBModel.CastList">
+        <MappingFragment StoreEntitySet="CastList">
+          <ScalarProperty Name="CastID" ColumnName="CastID" />
+          <ScalarProperty Name="CastList1" ColumnName="CastList" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Movies">
+      <EntityTypeMapping TypeName="MediaDBModel.Movies">
+        <MappingFragment StoreEntitySet="Movies">
+          <ScalarProperty Name="MovieID" ColumnName="MovieID" />
+          <ScalarProperty Name="MovieName" ColumnName="MovieName" />
+          <ScalarProperty Name="MovieGenre" ColumnName="MovieGenre" />
+          <ScalarProperty Name="CastID" ColumnName="CastID" />
+          <ScalarProperty Name="AwardsID" ColumnName="AwardsID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TVShows">
+      <EntityTypeMapping TypeName="MediaDBModel.TVShows">
+        <MappingFragment StoreEntitySet="TVShows">
+          <ScalarProperty Name="TVID" ColumnName="TVID" />
+          <ScalarProperty Name="TVName" ColumnName="TVName" />
+          <ScalarProperty Name="TVGenre" ColumnName="TVGenre" />
+          <ScalarProperty Name="CastID" ColumnName="CastID" />
+          <ScalarProperty Name="AwardsID" ColumnName="AwardsID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
