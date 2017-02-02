@@ -1,2 +1,0 @@
-F:\CPW212\CPW212FinalProject\MediaApplication\MediaApplication\bin\Debug\MediaApplication.exe.config
-C:\Users\rgarcia\Source\Repos\CPW-212-Team-Project\MediaApplication\MediaApplication\bin\Debug\MediaApplication.exe.config
