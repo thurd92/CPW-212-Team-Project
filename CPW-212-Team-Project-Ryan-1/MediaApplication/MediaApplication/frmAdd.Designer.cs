@@ -36,6 +36,7 @@
             this.btnAddAwards = new System.Windows.Forms.Button();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtGenre = new System.Windows.Forms.TextBox();
+            this.btnSave = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -56,6 +57,7 @@
             this.chbxMovie.TabIndex = 1;
             this.chbxMovie.Text = "Movie";
             this.chbxMovie.UseVisualStyleBackColor = true;
+            this.chbxMovie.CheckedChanged += new System.EventHandler(this.chbxMovie_CheckedChanged);
             // 
             // chbxTVShow
             // 
@@ -78,7 +80,7 @@
             // 
             // btnAddPerson
             // 
-            this.btnAddPerson.Location = new System.Drawing.Point(31, 207);
+            this.btnAddPerson.Location = new System.Drawing.Point(12, 207);
             this.btnAddPerson.Name = "btnAddPerson";
             this.btnAddPerson.Size = new System.Drawing.Size(75, 23);
             this.btnAddPerson.TabIndex = 4;
@@ -87,7 +89,7 @@
             // 
             // btnAddAwards
             // 
-            this.btnAddAwards.Location = new System.Drawing.Point(173, 207);
+            this.btnAddAwards.Location = new System.Drawing.Point(105, 207);
             this.btnAddAwards.Name = "btnAddAwards";
             this.btnAddAwards.Size = new System.Drawing.Size(75, 23);
             this.btnAddAwards.TabIndex = 5;
@@ -108,11 +110,22 @@
             this.txtGenre.Size = new System.Drawing.Size(125, 20);
             this.txtGenre.TabIndex = 7;
             // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(197, 207);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.TabIndex = 8;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
             // frmAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtGenre);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.btnAddAwards);
@@ -138,5 +151,6 @@
         private System.Windows.Forms.Button btnAddAwards;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.TextBox txtGenre;
+        private System.Windows.Forms.Button btnSave;
     }
 }

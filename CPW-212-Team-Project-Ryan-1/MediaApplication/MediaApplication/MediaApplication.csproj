@@ -96,6 +96,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MediaDBModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Movies.cs">
       <DependentUpon>MediaDBModel.tt</DependentUpon>
     </Compile>

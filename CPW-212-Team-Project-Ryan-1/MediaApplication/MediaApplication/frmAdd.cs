@@ -16,5 +16,27 @@ namespace MediaApplication
         {
             InitializeComponent();
         }
+        private Movies movie = null;
+        private TVShows show = null;
+        private void chbxMovie_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chbxMovie.Checked)
+            {
+
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (chbxMovie.Checked)
+            {
+                movie = new Movies(txtName.Text, txtGenre.Text);
+            }
+            else if (chbxTVShow.Checked)
+            {
+                show = new TVShows(txtName.Text, txtGenre.Text);
+            }
+            this.Close();
+        }
     }
 }
