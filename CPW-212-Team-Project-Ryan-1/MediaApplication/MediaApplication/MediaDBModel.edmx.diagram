@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e50a148d85104735bbb1db3d95b148a7" Name="Diagram1">
+        <EntityTypeShape EntityType="MediaDBModel.Awards" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MediaDBModel.CastList" Width="1.5" PointX="4.625" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MediaDBModel.Movies" Width="1.5" PointX="2.125" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="MediaDBModel.TVShows" Width="1.5" PointX="6.5" PointY="2.375" IsExpanded="true" />
+        <AssociationConnector Association="MediaDBModel.FK__Movies__AwardsID__15502E78" ManuallyRouted="false" />
+        <AssociationConnector Association="MediaDBModel.FK__TVShows__AwardsI__1920BF5C" ManuallyRouted="false" />
+        <AssociationConnector Association="MediaDBModel.FK__Movies__CastID__145C0A3F" ManuallyRouted="false" />
+        <AssociationConnector Association="MediaDBModel.FK__TVShows__CastID__182C9B23" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
