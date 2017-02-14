@@ -14,6 +14,10 @@ namespace MediaApplication
     
     public partial class Movies
     {
+        public Movies()
+        {
+
+        }
         public Movies(string name, string genre)
         {
             this.MovieName = name;

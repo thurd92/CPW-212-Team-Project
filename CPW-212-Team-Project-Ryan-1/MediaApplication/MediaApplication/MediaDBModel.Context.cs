@@ -26,11 +26,7 @@ namespace MediaApplication
             throw new UnintentionalCodeFirstException();
         }
 
-        internal static List<Movies> GetMovies()
-        {
-            throw new NotImplementedException();
-        }
-
+        
         public virtual DbSet<Awards> Awards { get; set; }
         public virtual DbSet<CastList> CastList { get; set; }
         public virtual DbSet<Movies> Movies { get; set; }
