@@ -19,7 +19,7 @@ namespace MediaApplication
             InitializeComponent();
         }
 
-        private void frmSearch_Load(object sender, EventArgs e)
+        public void frmSearch_Load(object sender, EventArgs e)
         {
             using (var db = new MediaDBEntities())
             {
@@ -47,6 +47,11 @@ namespace MediaApplication
                     lstBoxTVResults.Items.Add(tv.TVName);
                 }
             }
+        }
+
+        private void lstBoxMovieResults_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
