@@ -41,6 +41,7 @@
             this.lstBoxMovieResults.Name = "lstBoxMovieResults";
             this.lstBoxMovieResults.Size = new System.Drawing.Size(149, 186);
             this.lstBoxMovieResults.TabIndex = 0;
+            this.lstBoxMovieResults.SelectedIndexChanged += new System.EventHandler(this.lstBoxMovieResults_SelectedIndexChanged);
             // 
             // lstBoxTVResults
             // 
@@ -87,8 +88,8 @@
 
         #endregion
 
-        private System.Windows.Forms.ListBox lstBoxMovieResults;
-        private System.Windows.Forms.ListBox lstBoxTVResults;
+        public System.Windows.Forms.ListBox lstBoxMovieResults;
+        public System.Windows.Forms.ListBox lstBoxTVResults;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
     }
