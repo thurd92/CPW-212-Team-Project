@@ -18,13 +18,6 @@ namespace MediaApplication
             InitializeComponent();
         }
 
-
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            AddMedia addFrm = new AddMedia();
-            addFrm.Show();
-        }
-
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();

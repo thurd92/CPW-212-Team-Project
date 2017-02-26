@@ -41,7 +41,6 @@
             this.lstBoxMovieResults.Name = "lstBoxMovieResults";
             this.lstBoxMovieResults.Size = new System.Drawing.Size(149, 186);
             this.lstBoxMovieResults.TabIndex = 0;
-            this.lstBoxMovieResults.SelectedIndexChanged += new System.EventHandler(this.lstBoxMovieResults_SelectedIndexChanged);
             // 
             // lstBoxTVResults
             // 
