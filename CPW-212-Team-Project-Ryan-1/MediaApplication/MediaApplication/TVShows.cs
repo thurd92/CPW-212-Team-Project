@@ -14,20 +14,10 @@ namespace MediaApplication
     
     public partial class TVShows
     {
-       
-        public TVShows(string name, string genre)
-        {
-            this.TVName = name;
-            this.TVGenre= genre;
-        }
-
         public int TVID { get; set; }
         public string TVName { get; set; }
         public string TVGenre { get; set; }
-        public int CastID { get; set; }
-        public int AwardsID { get; set; }
-    
-        public virtual Awards Awards { get; set; }
-        public virtual CastList CastList { get; set; }
+        public Nullable<int> CastID { get; set; }
+        public Nullable<int> AwardsID { get; set; }
     }
 }
