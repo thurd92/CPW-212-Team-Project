@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="MediaDBModelStoreContainer" CdmEntityContainer="MediaDBEntities">
+  <EntityContainerMapping StorageEntityContainer="MediaDBModelStoreContainer" CdmEntityContainer="Entities">
     <EntitySetMapping Name="Awards">
       <EntityTypeMapping TypeName="MediaDBModel.Awards">
         <MappingFragment StoreEntitySet="Awards">
-          <ScalarProperty Name="AwardsID" ColumnName="AwardsID" />
+          <ScalarProperty Name="MovieID" ColumnName="MovieID" />
           <ScalarProperty Name="AwardsName" ColumnName="AwardsName" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -12,7 +12,7 @@
     <EntitySetMapping Name="CastList">
       <EntityTypeMapping TypeName="MediaDBModel.CastList">
         <MappingFragment StoreEntitySet="CastList">
-          <ScalarProperty Name="CastID" ColumnName="CastID" />
+          <ScalarProperty Name="MovieID" ColumnName="MovieID" />
           <ScalarProperty Name="CastList1" ColumnName="CastList" />
         </MappingFragment>
       </EntityTypeMapping>

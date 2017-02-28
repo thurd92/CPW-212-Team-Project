@@ -10,10 +10,9 @@
 namespace MediaApplication
 {
     using System;
-    using System.Collections.Generic;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-
+    
     public partial class MediaDBEntities : DbContext
     {
         public MediaDBEntities()
@@ -25,8 +24,7 @@ namespace MediaApplication
         {
             throw new UnintentionalCodeFirstException();
         }
-
-        
+    
         public virtual DbSet<Awards> Awards { get; set; }
         public virtual DbSet<CastList> CastList { get; set; }
         public virtual DbSet<Movies> Movies { get; set; }

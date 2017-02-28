@@ -33,11 +33,13 @@ namespace MediaApplication
         {
             frmAdd addForm = new frmAdd();
             addForm.ShowDialog();
+         
         }
 
         private void btnRemove_Click(object sender, EventArgs e)
         {
             frmSearch searchbox = new frmSearch(txtName.Text);
+            searchbox.Text = "Select Item to Remove";
             searchbox.ShowDialog();
 
             if(searchbox.lstBoxMovieResults.SelectedItem != null) // if (searchbox.lstBoxMovieResults.SelectedIndex >= 0) means they have chosen an index
@@ -68,7 +70,7 @@ namespace MediaApplication
 
                 foreach (var item in DeleteMovies)
                 {
-                    db.Movies.Remove(item);
+                    db.Movies.Remove(item);//perhaps will delete duplicates movies of different years
                     
                 }
                 foreach (var item in DeleteShows)

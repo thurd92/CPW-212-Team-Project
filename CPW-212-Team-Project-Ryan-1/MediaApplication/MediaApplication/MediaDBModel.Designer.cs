@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'E:\CPW212\CPW-212-Team-Project-Ryan-1\MediaApplication\MediaApplication\MediaDBModel.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\rgarcia\Desktop\CPW-212-Team-Project\CPW-212-Team-Project-Ryan-1\MediaApplication\MediaApplication\MediaDBModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

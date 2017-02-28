@@ -14,19 +14,9 @@ namespace MediaApplication
     
     public partial class Awards
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Awards()
-        {
-            this.Movies = new HashSet<Movies>();
-            this.TVShows = new HashSet<TVShows>();
-        }
-    
-        public int AwardsID { get; set; }
+        public int MovieID { get; set; }
         public string AwardsName { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Movies> Movies { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TVShows> TVShows { get; set; }
+        public virtual Movies Movies { get; set; }
     }
 }

@@ -2,21 +2,19 @@
 <Schema Namespace="MediaDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="Awards">
     <Key>
-      <PropertyRef Name="AwardsID" />
+      <PropertyRef Name="MovieID" />
     </Key>
-    <Property Name="AwardsID" Type="Int32" Nullable="false" />
-    <Property Name="AwardsName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <NavigationProperty Name="Movies" Relationship="Self.FK__Movies__AwardsID__15502E78" FromRole="Awards" ToRole="Movies" />
-    <NavigationProperty Name="TVShows" Relationship="Self.FK__TVShows__AwardsI__1920BF5C" FromRole="Awards" ToRole="TVShows" />
+    <Property Name="MovieID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AwardsName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Movies" Relationship="Self.FK__Awards__MovieID__173876EA" FromRole="Awards" ToRole="Movies" />
   </EntityType>
   <EntityType Name="CastList">
     <Key>
-      <PropertyRef Name="CastID" />
+      <PropertyRef Name="MovieID" />
     </Key>
-    <Property Name="CastID" Type="Int32" Nullable="false" />
-    <Property Name="CastList1" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
-    <NavigationProperty Name="Movies" Relationship="Self.FK__Movies__CastID__145C0A3F" FromRole="CastList" ToRole="Movies" />
-    <NavigationProperty Name="TVShows" Relationship="Self.FK__TVShows__CastID__182C9B23" FromRole="CastList" ToRole="TVShows" />
+    <Property Name="MovieID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CastList1" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Movies" Relationship="Self.FK__CastList__MovieI__145C0A3F" FromRole="CastList" ToRole="Movies" />
   </EntityType>
   <EntityType Name="Movies">
     <Key>
@@ -25,10 +23,10 @@
     <Property Name="MovieID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="MovieName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="MovieGenre" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Name="CastID" Type="Int32" Nullable="false" />
-    <Property Name="AwardsID" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Awards" Relationship="Self.FK__Movies__AwardsID__15502E78" FromRole="Movies" ToRole="Awards" />
-    <NavigationProperty Name="CastList" Relationship="Self.FK__Movies__CastID__145C0A3F" FromRole="Movies" ToRole="CastList" />
+    <Property Name="CastID" Type="Int32" />
+    <Property Name="AwardsID" Type="Int32" />
+    <NavigationProperty Name="Awards" Relationship="Self.FK__Awards__MovieID__173876EA" FromRole="Movies" ToRole="Awards" />
+    <NavigationProperty Name="CastList" Relationship="Self.FK__CastList__MovieI__145C0A3F" FromRole="Movies" ToRole="CastList" />
   </EntityType>
   <EntityType Name="TVShows">
     <Key>
@@ -37,79 +35,45 @@
     <Property Name="TVID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="TVName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="TVGenre" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Name="CastID" Type="Int32" Nullable="false" />
-    <Property Name="AwardsID" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Awards" Relationship="Self.FK__TVShows__AwardsI__1920BF5C" FromRole="TVShows" ToRole="Awards" />
-    <NavigationProperty Name="CastList" Relationship="Self.FK__TVShows__CastID__182C9B23" FromRole="TVShows" ToRole="CastList" />
+    <Property Name="CastID" Type="Int32" />
+    <Property Name="AwardsID" Type="Int32" />
   </EntityType>
-  <Association Name="FK__Movies__AwardsID__15502E78">
-    <End Role="Awards" Type="Self.Awards" Multiplicity="1" />
-    <End Role="Movies" Type="Self.Movies" Multiplicity="*" />
+  <Association Name="FK__Awards__MovieID__173876EA">
+    <End Role="Movies" Type="Self.Movies" Multiplicity="1" />
+    <End Role="Awards" Type="Self.Awards" Multiplicity="0..1" />
     <ReferentialConstraint>
-      <Principal Role="Awards">
-        <PropertyRef Name="AwardsID" />
+      <Principal Role="Movies">
+        <PropertyRef Name="MovieID" />
       </Principal>
-      <Dependent Role="Movies">
-        <PropertyRef Name="AwardsID" />
+      <Dependent Role="Awards">
+        <PropertyRef Name="MovieID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__TVShows__AwardsI__1920BF5C">
-    <End Role="Awards" Type="Self.Awards" Multiplicity="1" />
-    <End Role="TVShows" Type="Self.TVShows" Multiplicity="*" />
+  <Association Name="FK__CastList__MovieI__145C0A3F">
+    <End Role="Movies" Type="Self.Movies" Multiplicity="1" />
+    <End Role="CastList" Type="Self.CastList" Multiplicity="0..1" />
     <ReferentialConstraint>
-      <Principal Role="Awards">
-        <PropertyRef Name="AwardsID" />
+      <Principal Role="Movies">
+        <PropertyRef Name="MovieID" />
       </Principal>
-      <Dependent Role="TVShows">
-        <PropertyRef Name="AwardsID" />
+      <Dependent Role="CastList">
+        <PropertyRef Name="MovieID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Movies__CastID__145C0A3F">
-    <End Role="CastList" Type="Self.CastList" Multiplicity="1" />
-    <End Role="Movies" Type="Self.Movies" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="CastList">
-        <PropertyRef Name="CastID" />
-      </Principal>
-      <Dependent Role="Movies">
-        <PropertyRef Name="CastID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__TVShows__CastID__182C9B23">
-    <End Role="CastList" Type="Self.CastList" Multiplicity="1" />
-    <End Role="TVShows" Type="Self.TVShows" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="CastList">
-        <PropertyRef Name="CastID" />
-      </Principal>
-      <Dependent Role="TVShows">
-        <PropertyRef Name="CastID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <EntityContainer Name="MediaDBEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Awards" EntityType="Self.Awards" />
     <EntitySet Name="CastList" EntityType="Self.CastList" />
     <EntitySet Name="Movies" EntityType="Self.Movies" />
     <EntitySet Name="TVShows" EntityType="Self.TVShows" />
-    <AssociationSet Name="FK__Movies__AwardsID__15502E78" Association="Self.FK__Movies__AwardsID__15502E78">
-      <End Role="Awards" EntitySet="Awards" />
+    <AssociationSet Name="FK__Awards__MovieID__173876EA" Association="Self.FK__Awards__MovieID__173876EA">
       <End Role="Movies" EntitySet="Movies" />
-    </AssociationSet>
-    <AssociationSet Name="FK__TVShows__AwardsI__1920BF5C" Association="Self.FK__TVShows__AwardsI__1920BF5C">
       <End Role="Awards" EntitySet="Awards" />
-      <End Role="TVShows" EntitySet="TVShows" />
     </AssociationSet>
-    <AssociationSet Name="FK__Movies__CastID__145C0A3F" Association="Self.FK__Movies__CastID__145C0A3F">
-      <End Role="CastList" EntitySet="CastList" />
+    <AssociationSet Name="FK__CastList__MovieI__145C0A3F" Association="Self.FK__CastList__MovieI__145C0A3F">
       <End Role="Movies" EntitySet="Movies" />
-    </AssociationSet>
-    <AssociationSet Name="FK__TVShows__CastID__182C9B23" Association="Self.FK__TVShows__CastID__182C9B23">
       <End Role="CastList" EntitySet="CastList" />
-      <End Role="TVShows" EntitySet="TVShows" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

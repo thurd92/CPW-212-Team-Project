@@ -43,7 +43,7 @@ namespace MediaApplication
             return shows;
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        public void btnSave_Click(object sender, EventArgs e)
         {
             MediaDBEntities db = new MediaDBEntities();
 
