@@ -12,6 +12,7 @@ namespace MediaApplication
 {
     public partial class frmSearch : Form
     {
+        //by default, the name variable expects the user to leave the name textbox on the main form blank.
         string name = "";
         public frmSearch(string name)
         {
@@ -23,12 +24,14 @@ namespace MediaApplication
         {
             using (var db = new MediaDBEntities())
             {
+                //A general LINQ query that grabs all movies and tv shows.
                 var grabAllMovies = from m in db.Movies
                                     select m;
                 var grabAllTVShows = from t in db.TVShows
                                     select t; 
                 if (name != "")
                 {
+                    //A specialized LINQ query that grabs tv shows and movies matching the contents of the name field.
                     grabAllMovies = from m in db.Movies
                                         where m.MovieName == name
                                         select m;
@@ -47,11 +50,6 @@ namespace MediaApplication
                     lstBoxTVResults.Items.Add(tv.TVName);
                 }
             }
-        }
-
-        private void lstBoxMovieResults_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
