@@ -18,15 +18,17 @@ namespace MediaApplication
             InitializeComponent();
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
+        /// <summary>
+        /// Displays the box with the list of all the movies and tv shows in the database
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSearch_Click(object sender, EventArgs e)
         {
             frmSearch searchbox = new frmSearch(txtName.Text);
+            searchbox.HideDeleteButton(); //hides the button
             searchbox.ShowDialog();
+            
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -39,46 +41,61 @@ namespace MediaApplication
         private void btnRemove_Click(object sender, EventArgs e)
         {
             frmSearch searchbox = new frmSearch(txtName.Text);
-            searchbox.Text = "Select Item to Remove";
-            searchbox.ShowDialog();
+            searchbox.Text = "Select Item to Remove"; //used the form from frmSearch and just renamed it 
+            searchbox.ShowDialog(); //displays the list with movies and tv shows
 
-            if(searchbox.lstBoxMovieResults.SelectedItem != null) // if (searchbox.lstBoxMovieResults.SelectedIndex >= 0) means they have chosen an index
-            {
-                string selected = searchbox.lstBoxMovieResults.SelectedItem.ToString();
-                //create method to Remove movie from database
-                //searchbox.lstBoxMovieResults.Items.Remove(selected); //this is does not remove the item from the database'
-                RemoveMedia(selected);
-            }
-            else if (searchbox.lstBoxTVResults.SelectedIndex >= 0)
-            {
-                string selected = searchbox.lstBoxTVResults.SelectedItem.ToString(); //when the method is static we use the class to reference, but when is nonstatic and object of the class is needed
-                RemoveMedia(selected);
-            }
+
+            ///////MOVE THIS CODE TO THE btnDelete_Click in frmSearch.cs/////
+            //if(searchbox.lstBoxMovieResults.SelectedItem != null) // if (searchbox.lstBoxMovieResults.SelectedIndex >= 0) means they have chosen an index
+            //{
+            //    string selected = searchbox.lstBoxMovieResults.SelectedItem.ToString();
+            //    //create method to Remove movie from database
+            //    //searchbox.lstBoxMovieResults.Items.Remove(selected); //this is does not remove the item from the database'
+            //    RemoveMedia(selected);
+            //}
+            //else if (searchbox.lstBoxTVResults.SelectedIndex >= 0)
+            //{
+            //    string selected = searchbox.lstBoxTVResults.SelectedItem.ToString(); //when the method is static we use the class to reference, but when is nonstatic and object of the class is needed
+            //    RemoveMedia(selected);
+            //}
 
         }
         public void RemoveMedia(string selected)
         {
-            using (var db = new MediaDBEntities())
+            
+            DialogResult selection = MessageBox.Show("Are you sure you want to delete this item?", "Warning!", MessageBoxButtons.YesNo,
+                                 MessageBoxIcon.Question);//asks user if they are sure they want to remove an item
+
+            if (selection == DialogResult.Yes)
             {
-                var DeleteMovies = from Movies in db.Movies
-                                   where Movies.MovieName == selected
-                                   select Movies;
-
-                var DeleteShows = from TVShows in db.TVShows
-                                  where TVShows.TVName == selected
-                                  select TVShows;
-
-                foreach (var item in DeleteMovies)
+                using (var db = new MediaDBEntities())
                 {
-                    db.Movies.Remove(item);//perhaps will delete duplicates movies of different years
-                    
+                    var DeleteMovies = (from Movies in db.Movies
+                                        where Movies.MovieName == selected
+                                        select Movies).ToList();
+
+                    var DeleteShows = (from TVShows in db.TVShows
+                                       where TVShows.TVName == selected
+                                       select TVShows).ToList();
+
+                    foreach (Movies item in DeleteMovies)
+                    {
+                        db.Movies.Remove(item);//perhaps will delete duplicates movies of different years
+
+                    }
+                    foreach (TVShows item in DeleteShows)
+                    {
+                        db.TVShows.Remove(item);
+                    }
+
+                    db.SaveChanges();
                 }
-                foreach (var item in DeleteShows)
-                {
-                    db.TVShows.Remove(item);
-                }
-                MessageBox.Show("Are you sure you want to delete this item?");
             }
+
+        }
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

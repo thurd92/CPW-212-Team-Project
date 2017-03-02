@@ -19,15 +19,6 @@ namespace MediaApplication
         }
        
        
-        private void chbxMovie_CheckedChanged(object sender, EventArgs e)
-        {
-            if (chbxMovie.Checked)
-            {
-
-            }
-        }
-
-       
         public static List<Movies> GetAllMovies()
         {
             MediaDBEntities db = new MediaDBEntities();
