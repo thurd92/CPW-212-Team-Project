@@ -59,7 +59,7 @@
             this.chbxMovie.TabIndex = 1;
             this.chbxMovie.Text = "Movie";
             this.chbxMovie.UseVisualStyleBackColor = true;
-            this.chbxMovie.CheckedChanged += new System.EventHandler(this.chbxMovie_CheckedChanged);
+            
             // 
             // chbxTVShow
             // 
