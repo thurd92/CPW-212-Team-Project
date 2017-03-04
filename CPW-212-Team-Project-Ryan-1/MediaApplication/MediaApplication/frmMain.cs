@@ -31,6 +31,12 @@ namespace MediaApplication
             
         }
 
+        /// <summary>
+        /// Displays another form that allows the user to add their own media
+        /// into the underlying database.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAdd_Click(object sender, EventArgs e)
         {
             frmAdd addForm = new frmAdd();
@@ -38,31 +44,30 @@ namespace MediaApplication
          
         }
 
+        /// <summary>
+        /// Brings up an altered version of the search form that allows the user to 
+        /// delete a selected item.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnRemove_Click(object sender, EventArgs e)
         {
             frmSearch searchbox = new frmSearch(txtName.Text);
             searchbox.Text = "Select Item to Remove"; //used the form from frmSearch and just renamed it 
             searchbox.ShowDialog(); //displays the list with movies and tv shows
 
-
-            ///////MOVE THIS CODE TO THE btnDelete_Click in frmSearch.cs/////
-            //if(searchbox.lstBoxMovieResults.SelectedItem != null) // if (searchbox.lstBoxMovieResults.SelectedIndex >= 0) means they have chosen an index
-            //{
-            //    string selected = searchbox.lstBoxMovieResults.SelectedItem.ToString();
-            //    //create method to Remove movie from database
-            //    //searchbox.lstBoxMovieResults.Items.Remove(selected); //this is does not remove the item from the database'
-            //    RemoveMedia(selected);
-            //}
-            //else if (searchbox.lstBoxTVResults.SelectedIndex >= 0)
-            //{
-            //    string selected = searchbox.lstBoxTVResults.SelectedItem.ToString(); //when the method is static we use the class to reference, but when is nonstatic and object of the class is needed
-            //    RemoveMedia(selected);
-            //}
-
         }
+
+        /// <summary>
+        /// Performs the delete operation once it has confirmation from the generated Messagebox
+        /// on the selected member.
+        /// </summary>
+        /// <param name="selected">A string representation of the selected member on the previous search form</param>
         public void RemoveMedia(string selected)
         {
-            
+
+            //This uses an overload of MessageBox.Show that places Yes/No buttons on the box and returns a DialogResult which we use to
+            //determine whether or not to preform the delete operation.
             DialogResult selection = MessageBox.Show("Are you sure you want to delete this item?", "Warning!", MessageBoxButtons.YesNo,
                                  MessageBoxIcon.Question);//asks user if they are sure they want to remove an item
 
@@ -93,6 +98,12 @@ namespace MediaApplication
             }
 
         }
+
+        /// <summary>
+        /// Exits out of the application.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();

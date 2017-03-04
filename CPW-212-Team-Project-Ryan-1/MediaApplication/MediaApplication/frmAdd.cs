@@ -18,7 +18,10 @@ namespace MediaApplication
             InitializeComponent();
         }
        
-       
+        /// <summary>
+        /// Queries the database for a list of all movies.
+        /// </summary>
+        /// <returns>A List of movies to be used in other operations</returns>
         public static List<Movies> GetAllMovies()
         {
             MediaDBEntities db = new MediaDBEntities();
@@ -26,6 +29,11 @@ namespace MediaApplication
                                    select mov).ToList();
             return movies;
         }
+        
+        /// <summary>
+        /// Queries the database for a list of all TV shows.
+        /// </summary>
+        /// <returns>A List of all TV shows to be used in other operations</returns>
         public static List<TVShows> GetAllTVShows()
         {
             MediaDBEntities db = new MediaDBEntities();
@@ -34,6 +42,12 @@ namespace MediaApplication
             return shows;
         }
 
+        /// <summary>
+        /// Adds media to the database depending on which checkbox is checked on the
+        /// Add form and closes the connection after.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void btnSave_Click(object sender, EventArgs e)
         {
             MediaDBEntities db = new MediaDBEntities();
