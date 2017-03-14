@@ -34,6 +34,7 @@
             this.lbName = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnAdd
@@ -92,6 +93,16 @@
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
+            // btnEdit
+            // 
+            this.btnEdit.Location = new System.Drawing.Point(26, 186);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(102, 47);
+            this.btnEdit.TabIndex = 0;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
             // MediaApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -102,6 +113,7 @@
             this.Controls.Add(this.lbName);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnRemove);
+            this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnAdd);
             this.Name = "MediaApp";
             this.Text = "Media Catalog";
@@ -118,6 +130,7 @@
         private System.Windows.Forms.Label lbName;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Button btnEdit;
     }
 }
 

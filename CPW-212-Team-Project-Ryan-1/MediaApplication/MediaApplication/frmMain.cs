@@ -108,5 +108,11 @@ namespace MediaApplication
         {
             this.Close();
         }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            frmEdit editForm = new frmEdit();
+            editForm.ShowDialog();
+        }
     }
 }
