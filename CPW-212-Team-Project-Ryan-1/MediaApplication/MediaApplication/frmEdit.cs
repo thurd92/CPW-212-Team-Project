@@ -43,9 +43,20 @@ namespace MediaApplication
             //}
             //this.Close();
 
-            using (var db = new MediaDBEntities())
-            {
 
+            if (chkMovie.Checked)
+            {
+                using (var db = new MediaDBEntities())
+                {
+                    var grabName = from m in db.Movies select m.MovieName;
+                }
+            }
+            else if (chkTV.Checked)
+            {
+                using (var db = new MediaDBEntities())
+                {
+                    var grabName = from t in db.TVShows select t.TVName;
+                }
             }
         }
     }
