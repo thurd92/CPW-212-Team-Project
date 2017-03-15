@@ -56,7 +56,8 @@ namespace MediaApplication
             {
                 Movies movie = new Movies(txtName.Text, txtGenre.Text);
                 db.Movies.Add(movie);
-                db.SaveChanges();             
+                db.SaveChanges();
+                           
             }
             else if (chbxTVShow.Checked)
             {

@@ -105,6 +105,7 @@
             this.Controls.Add(this.btnAdd);
             this.Name = "MediaApp";
             this.Text = "Media Catalog";
+            this.Load += new System.EventHandler(this.MediaApp_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
