@@ -25,10 +25,19 @@ namespace MediaApplication
         /// <param name="e"></param>
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            frmSearch searchbox = new frmSearch(txtName.Text);
-            searchbox.HideDeleteButton(); //hides the button
-            searchbox.ShowDialog();
-            
+            if (txtName.Text != null)
+            {
+                frmSearch searchbox = new frmSearch(txtName.Text);
+                searchbox.HideDeleteButton(); //hides the button
+                searchbox.ShowDialog();
+            }
+            else {
+                MessageBox.Show("there must be text in the textbox");
+                ///is it regestering changes 
+                ///
+
+
+            }
         }
 
         /// <summary>
@@ -107,6 +116,11 @@ namespace MediaApplication
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void MediaApp_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
