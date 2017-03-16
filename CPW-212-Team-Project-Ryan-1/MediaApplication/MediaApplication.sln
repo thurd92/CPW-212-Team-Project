@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaApplication", "MediaApplication\MediaApplication.csproj", "{CAEF2361-6960-4743-93FB-C454C7C40C9A}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "mediaDB", "mediaDB\mediaDB.sqlproj", "{F6B9C467-79AF-428B-B65A-B5B5221586DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,12 @@ Global
 		{CAEF2361-6960-4743-93FB-C454C7C40C9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CAEF2361-6960-4743-93FB-C454C7C40C9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CAEF2361-6960-4743-93FB-C454C7C40C9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6B9C467-79AF-428B-B65A-B5B5221586DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6B9C467-79AF-428B-B65A-B5B5221586DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6B9C467-79AF-428B-B65A-B5B5221586DF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{F6B9C467-79AF-428B-B65A-B5B5221586DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6B9C467-79AF-428B-B65A-B5B5221586DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6B9C467-79AF-428B-B65A-B5B5221586DF}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
