@@ -96,5 +96,11 @@ namespace MediaApplication
         {
             btnDelete.Visible = false;
         }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            frmEdit editForm = new frmEdit();
+            editForm.ShowDialog();
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MediaApplication;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,37 +28,36 @@ namespace MediaApplication
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            //MediaDBEntities db = new MediaDBEntities();
-
-            //if (chkMovie.Checked)
-            //{
-            //    Movies movie = db.Movies.Find(MovieID);
-            //    db.Movies.Add(movie);
-            //    db.SaveChanges();
-            //}
-            //else if (chkTV.Checked)
-            //{
-            //    TVShows show = db.TVShows.Find(TVID);
-            //    db.TVShows.Add(show);
-            //    db.SaveChanges();
-            //}
-            //this.Close();
-
+            MediaDBEntities db = new MediaDBEntities();
 
             if (chkMovie.Checked)
             {
-                using (var db = new MediaDBEntities())
-                {
-                    var grabName = from m in db.Movies select m.MovieName;
-                }
+                Movies movie = db.Movies.Find();
+                db.Movies.Add(movie);
+                db.SaveChanges();
             }
             else if (chkTV.Checked)
             {
-                using (var db = new MediaDBEntities())
-                {
-                    var grabName = from t in db.TVShows select t.TVName;
-                }
+                TVShows show = db.TVShows.Find();
+                db.TVShows.Add(show);
+                db.SaveChanges();
             }
+            this.Close();
+
+            //if (chkMovie.Checked)
+            //{
+            //    using (var db = new MediaDBEntities())
+            //    {
+            //        var grabName = from m in db.Movies select m.MovieName;
+            //    }
+            //}
+            //else if (chkTV.Checked)
+            //{
+            //    using (var db = new MediaDBEntities())
+            //    {
+            //        var grabName = from t in db.TVShows select t.TVName;
+            //    }
+            //}
         }
     }
 }

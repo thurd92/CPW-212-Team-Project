@@ -118,12 +118,6 @@ namespace MediaApplication
             this.Close();
         }
 
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
-            frmEdit editForm = new frmEdit();
-            editForm.ShowDialog();
-        }
-
         private void MediaApp_Load(object sender, EventArgs e)
         {
 

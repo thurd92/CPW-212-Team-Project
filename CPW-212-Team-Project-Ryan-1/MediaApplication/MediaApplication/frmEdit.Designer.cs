@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.chkMovie = new System.Windows.Forms.CheckBox();
-            this.chkTV = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtEditName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,27 +37,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtEditAward = new System.Windows.Forms.TextBox();
             this.btnEdit = new System.Windows.Forms.Button();
+            this.chkTV = new System.Windows.Forms.CheckBox();
+            this.chkMovie = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
-            // 
-            // chkMovie
-            // 
-            this.chkMovie.AutoSize = true;
-            this.chkMovie.Location = new System.Drawing.Point(30, 24);
-            this.chkMovie.Name = "chkMovie";
-            this.chkMovie.Size = new System.Drawing.Size(55, 17);
-            this.chkMovie.TabIndex = 0;
-            this.chkMovie.Text = "Movie";
-            this.chkMovie.UseVisualStyleBackColor = true;
-            // 
-            // chkTV
-            // 
-            this.chkTV.AutoSize = true;
-            this.chkTV.Location = new System.Drawing.Point(171, 24);
-            this.chkTV.Name = "chkTV";
-            this.chkTV.Size = new System.Drawing.Size(70, 17);
-            this.chkTV.TabIndex = 1;
-            this.chkTV.Text = "TV Show";
-            this.chkTV.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -135,6 +115,26 @@
             this.btnEdit.UseVisualStyleBackColor = true;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
+            // chkTV
+            // 
+            this.chkTV.AutoSize = true;
+            this.chkTV.Location = new System.Drawing.Point(171, 24);
+            this.chkTV.Name = "chkTV";
+            this.chkTV.Size = new System.Drawing.Size(70, 17);
+            this.chkTV.TabIndex = 1;
+            this.chkTV.Text = "TV Show";
+            this.chkTV.UseVisualStyleBackColor = true;
+            // 
+            // chkMovie
+            // 
+            this.chkMovie.AutoSize = true;
+            this.chkMovie.Location = new System.Drawing.Point(30, 24);
+            this.chkMovie.Name = "chkMovie";
+            this.chkMovie.Size = new System.Drawing.Size(55, 17);
+            this.chkMovie.TabIndex = 0;
+            this.chkMovie.Text = "Movie";
+            this.chkMovie.UseVisualStyleBackColor = true;
+            // 
             // frmEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -160,9 +160,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.CheckBox chkMovie;
-        private System.Windows.Forms.CheckBox chkTV;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtEditName;
         private System.Windows.Forms.Label label2;
@@ -172,5 +169,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtEditAward;
         private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.CheckBox chkTV;
+        private System.Windows.Forms.CheckBox chkMovie;
     }
 }
