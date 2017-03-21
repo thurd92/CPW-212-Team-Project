@@ -99,8 +99,34 @@ namespace MediaApplication
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            frmEdit editForm = new frmEdit();
-            editForm.ShowDialog();
+            if (lstBoxMovieResults.SelectedIndex >= 0)
+            {
+                //string selected = lstBoxMovieResults.SelectedItem.ToString();
+                Movies movie = (Movies)lstBoxMovieResults.SelectedItem;
+                string name = movie.MovieName;
+                string genre = movie.MovieGenre;
+                CastList cast = movie.CastList;
+                Awards award = movie.Awards;
+                frmEdit movieForm = new frmEdit(name, genre, cast, award);
+                movieForm.ShowDialog();
+            }
+            else if (lstBoxTVResults.SelectedIndex >= 0)
+            {
+                //string selected = lstBoxTVResults.SelectedItem.ToString();
+                TVShows tv = (TVShows)lstBoxTVResults.SelectedItem;
+                string name = tv.TVName;
+                string genre = tv.TVGenre;
+                frmEdit tvForm = new frmEdit(name, genre);
+                tvForm.ShowDialog();
+            }
         }
+
+        //public class Eidt : Form
+        //{
+        //    public Edit()
+        //    {
+        //        txtEditName.Text
+        //    }
+        //}
     }
 }

@@ -13,9 +13,29 @@ namespace MediaApplication
 {
     public partial class frmEdit : Form
     {
+        private string genre;
+        private CastList cast;
+        private Awards award;
+
         public frmEdit()
         {
             InitializeComponent();
+        }
+
+        public frmEdit(string name, string genre, CastList cast, Awards award)
+        {
+            chkMovie.Checked.Equals(true);
+            txtEditName.Text = name;
+            txtEditGenre.Text = genre;
+            this.cast = cast;
+            this.award = award;
+        }
+
+        public frmEdit(string name, string genre)
+        {
+            chkTV.Checked.Equals(true);
+            txtEditName.Text = name;
+            txtEditGenre.Text = genre;
         }
 
         private void frmEdit_Load(object sender, EventArgs e)
@@ -28,21 +48,23 @@ namespace MediaApplication
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            MediaDBEntities db = new MediaDBEntities();
+            
 
-            if (chkMovie.Checked)
-            {
-                Movies movie = db.Movies.Find();
-                db.Movies.Add(movie);
-                db.SaveChanges();
-            }
-            else if (chkTV.Checked)
-            {
-                TVShows show = db.TVShows.Find();
-                db.TVShows.Add(show);
-                db.SaveChanges();
-            }
-            this.Close();
+            //MediaDBEntities db = new MediaDBEntities();
+
+            //if (chkMovie.Checked)
+            //{
+            //    Movies movie = db.Movies.Find();
+            //    db.Movies.Add(movie);
+            //    db.SaveChanges();
+            //}
+            //else if (chkTV.Checked)
+            //{
+            //    TVShows show = db.TVShows.Find();
+            //    db.TVShows.Add(show);
+            //    db.SaveChanges();
+            //}
+            //this.Close();
 
             //if (chkMovie.Checked)
             //{
